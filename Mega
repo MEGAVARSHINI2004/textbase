@@ -1,0 +1,35 @@
+# Import necessary modules
+# ...
+
+# Initialize your chatbot model or response generation mechanism
+# ...
+
+# Define the on_message function
+def on_message(message):
+    # Pre-process the incoming message if needed
+    # ...
+
+    # Pass the message to your chatbot model to generate a response
+    response = your_chatbot_model.generate_response(message)
+
+    # Optionally, perform post-processing on the response
+    # ...
+
+    # Return the response
+    return response
+
+# Main function to handle incoming messages
+def main():
+    while True:
+        # Receive incoming message (e.g., from a messaging system)
+        incoming_message = receive_message()
+
+        # Call on_message to process the message and get the response
+        response = on_message(incoming_message)
+
+        # Send the response back to the user (e.g., via the messaging system)
+        send_response(response)
+
+# Entry point of the program
+if __name__ == "__main__":
+    main()
